@@ -1,0 +1,20 @@
+
+<h1>Listing Bikes</h1>
+ 
+<table>
+
+  <%= link_to 'New bike', new_bike_path %>
+
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @bikes.each do |bike| %>
+    <tr>
+      <td><%= bike.title %></td>
+      <td><%= bike.description %></td>
+      <td><%= link_to 'Show', bike_path(bike) %></td>
+    </tr>
+  <% end %>
+</table>
